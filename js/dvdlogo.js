@@ -1,3 +1,8 @@
+function clamp(number, min, max) {
+    return Math.min(Math.max(number, min), max);
+}
+
+
 let direction = [1, 1];
 
 let windowWidth = window.innerWidth;
