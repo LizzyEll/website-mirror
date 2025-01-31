@@ -53,7 +53,7 @@ function move() {
 
 setInterval(move, 1000 / 60);
 
-let tempdirection;
+let tempdirection = [1, 1];
 
 main.onmouseover = function() {
     tempdirection = direction;
