@@ -5,26 +5,25 @@ function clamp(number, min, max) {
 
 let direction = [1, 1];
 
+let mainStyle = getComputedStyle(main);
+
+let padding = parseInt(mainStyle.padding);
+
 let windowWidth = window.innerWidth;
 let windowHeight = window.innerHeight;
 
+let rawHeight = parseInt(mainStyle.height);
+let rawWidth = parseInt(mainStyle.width);
+
+let trueHeight = Math.floor(rawHeight + padding * 2);
+let trueWidth = Math.floor(rawWidth + padding * 2);
+
 function move() {
-    if (direction[0] == 0 && direction[1] == 0) {
-        return;
-    }
-    let mainStyle = getComputedStyle(main);
+    mainStyle = getComputedStyle(main);
     
-    let rawHeight = parseInt(mainStyle.height);
-    let rawWidth = parseInt(mainStyle.width);
-
-    let padding = parseInt(mainStyle.padding);
-    
-    let trueHeight = Math.floor(rawHeight + padding * 2);
-    let trueWidth = Math.floor(rawWidth + padding * 2);
-
     let currentTop = parseInt(mainStyle.top);
     let currentLeft = parseInt(mainStyle.left);
-
+    
     let topAmount = (direction[0]);
     let leftAmount = (direction[1]);
 
@@ -63,4 +62,4 @@ main.onmouseover = function() {
 
 main.onmouseout = function() {
     direction = tempdirection;
-}   
+}
