@@ -1,13 +1,7 @@
-let main = document.querySelector('main');
-
 let direction = [1, 1];
 
 let windowWidth = window.innerWidth;
 let windowHeight = window.innerHeight;
-
-function clamp(number, min, max) {
-    return Math.min(Math.max(number, min), max);
-}
 
 function move() {
     if (direction[0] == 0 && direction[1] == 0) {
