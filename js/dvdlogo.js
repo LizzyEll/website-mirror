@@ -53,7 +53,7 @@ function move() {
     }
 }
 
-setInterval(move, 1000 / 30);
+setInterval(move, 1000 / 60);
 
 let tempdirection;
 
