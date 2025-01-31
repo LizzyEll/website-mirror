@@ -63,3 +63,13 @@ main.onmouseover = function() {
 main.onmouseout = function() {
     direction = tempdirection;
 }
+
+function resetWindow() {
+    windowWidth = window.innerWidth;
+    windowHeight = window.innerHeight;
+
+    trueHeight = Math.floor(rawHeight + padding * 2);
+    trueWidth = Math.floor(rawWidth + padding * 2);
+}
+
+window.onresize = resetWindow;
